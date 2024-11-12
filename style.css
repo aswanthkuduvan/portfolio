@@ -8,7 +8,7 @@ html {
 }
 
 body{
-    /* background-color: black; */
+    background-color: black;
 }
 
 
@@ -97,11 +97,11 @@ a:hover{
 .name{
     font-size: 80px;
     font-family: "Sour Gummy", sans-serif;
-    font-weight: 500px;
-    width: 500px;
+    font-weight: 700;
     line-height: 80px;
     margin-top: 10px;
     margin-bottom: 30px;
+    color: white;
 }
 
 .my-name{
@@ -148,13 +148,16 @@ a:hover{
 
 .about-content{
     font-size: 20px;
+    color: white;
     font-family: "Sour Gummy", sans-serif;
     font-weight: 500;
-    width: 800px;
+    max-width: 800px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
 
+/* project styling */
 .project{
     padding-top: 100px;
 }
@@ -178,6 +181,18 @@ a:hover{
     margin-right: auto;
 }
 
+@media(max-width:768px){
+    .project-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width:1024px){
+    .project-grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
 .project-details{
     border: 2px solid cyan;
     border-radius: 10px;
@@ -199,13 +214,14 @@ a:hover{
     font-size: 24px;
     font-family: "Sour Gummy", sans-serif;
     font-weight: 500;
-    color: cyan;
+    color: white;
     transition: color 0.15s;
     line-height: 24px;
+    transition: color 0.15s;
 }
 
 .project-name a:hover{
-    color: white;
+    color: cyan;
 }
 
 /* contact section styling */
@@ -227,17 +243,22 @@ a:hover{
 }
 
 input[type=text], select, textarea, input[type=number], input[type=email]{
-    width: 50%;
+    width: 700px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     padding: 20px 10px;
     margin-bottom: 20px;
     border: 2px solid cyan;
     border-radius: 5px;
+    background-color: transparent;
 }
 
 input::placeholder, textarea::placeholder, input, textarea{
     font-size: 16px;
     font-family: "Sour Gummy", sans-serif;
     font-weight: 500;
+    color: white;
 }
 
 .submit-button{
